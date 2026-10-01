@@ -2,8 +2,9 @@ name: Scheduled Check-In Job
 
 on:
   schedule:
-    - cron: '0 0 * * *'  # 每天 00:00 UTC 执行，调整为你需要的时间
-  workflow_dispatch:  # 允许手动触发
+    - cron: '0 16 * * *' # 北京时间 00:00 执行
+    - cron: '30 12 * * *' # 北京时间 20:30 执行
+  workflow_dispatch: # 允许手动触发
 
 jobs:
   checkin:
